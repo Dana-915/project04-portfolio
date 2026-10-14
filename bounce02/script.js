@@ -1,3 +1,4 @@
+
 const languageButton = document.getElementById("language-toggle");
 
 const translations = {
@@ -40,7 +41,8 @@ languageButton.addEventListener("click", function () {
     const text = translations[currentLanguage];
 
     document.documentElement.lang = currentLanguage;
-    document.documentElement.dir = currentLanguage === "ar" ? "rtl" : "ltr";
+    document.documentElement.dir =
+        currentLanguage === "ar" ? "rtl" : "ltr";
 
     document.getElementById("site-title").textContent = text.siteTitle;
     languageButton.textContent = text.button;
